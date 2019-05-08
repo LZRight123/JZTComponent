@@ -25,7 +25,7 @@ public class TableViewDataSource<Model, T: UITableViewCell>: NSObject, UITableVi
         super.init()
     }
     
-    subscript(_ index: Int) -> Model {
+    public subscript(_ index: Int) -> Model {
         get { return models[index] }
     }
     
