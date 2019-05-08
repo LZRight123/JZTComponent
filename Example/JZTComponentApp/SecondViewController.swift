@@ -11,11 +11,24 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    var dataSource: TableViewDataSource<String, TableViewCell>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.regiseter(nib: TableViewCell.self)
+        let tableViewDatasource = TableViewDataSource(models: [""], cellType: TableViewCell.self) { (model, cell) in
+            
+        }
+        dataSource = TableViewCell.makeDataSource(for: ["1", "2"])
+        tableView.dataSource = tableViewDatasource
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = dataSource?[indexPath.row]
+        
     }
 
 
 }
+
 
