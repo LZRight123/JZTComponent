@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'JZTComponent' do
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'JZTComponent', :path => '../'
+
+end
+
+
+
+
