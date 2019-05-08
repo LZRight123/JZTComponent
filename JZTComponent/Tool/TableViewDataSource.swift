@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TableViewDataSource<Model, T: UITableViewCell>: NSObject, UITableViewDataSource {
+open class TableViewDataSource<Model, T: UITableViewCell>: NSObject, UITableViewDataSource {
     typealias CellConfigurator = (Model, T) -> Void
     
     private var models: [Model]
