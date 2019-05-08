@@ -8,6 +8,7 @@
     
 
 import UIKit
+@_exported import JZTComponent
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

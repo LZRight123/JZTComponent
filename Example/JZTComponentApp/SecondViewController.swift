@@ -8,7 +8,6 @@
     
 
 import UIKit
-import JZTComponent
 
 class SecondViewController: UITableViewController {
     
