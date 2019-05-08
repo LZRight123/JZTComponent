@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LZCache: NSObject {
+open class LZCache: NSObject {
     @objc static let visitRecordDB = LZCache(direcotryName: "JZT_VisitRecord")
     
     private let direcotryName: String
@@ -16,37 +16,37 @@ public class LZCache: NSObject {
     private var directory: URL {
         return createDirectory(directoryName: direcotryName)
     }
-    init(direcotryName: String, direcotryType: FileManager.SearchPathDirectory = .cachesDirectory) {
+    public init(direcotryName: String, direcotryType: FileManager.SearchPathDirectory = .cachesDirectory) {
         self.direcotryName = direcotryName
         self.direcotryType = direcotryType
         super.init()
     }
     
     @discardableResult
-    @objc func save(_ obj: NSCoding, for key: String) -> Bool {
+    @objc public func save(_ obj: NSCoding, for key: String) -> Bool {
         let filePath = directory.appendingPathComponent(key).path
         return NSKeyedArchiver.archiveRootObject(obj, toFile: filePath)
     }
     
-    @objc func getCahche(for key: String) -> NSCoding? {
+    @objc public func getCahche(for key: String) -> NSCoding? {
         let filePath = directory.appendingPathComponent(key).path
         let result = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? NSCoding
         return result
     }
     
-    @objc func remove(_ key: String) {
+    @objc public func remove(_ key: String) {
         let filePath = directory.appendingPathComponent(key).path
         removeFile(path: filePath)
     }
     
-    @objc func clearAllCache() {
+    @objc public func clearAllCache() {
         removeFile(path: directory.path)
     }
 }
 
 
 //MARK:- help method
-func createDirectory(directoryName: String, for target: FileManager.SearchPathDirectory = .cachesDirectory) -> URL{
+public func createDirectory(directoryName: String, for target: FileManager.SearchPathDirectory = .cachesDirectory) -> URL{
     let urlDir = FileManager.default.urls(for: target, in: .userDomainMask).first!
     let directryPath = urlDir.appendingPathComponent(directoryName)
     do {
@@ -57,7 +57,7 @@ func createDirectory(directoryName: String, for target: FileManager.SearchPathDi
     }
 }
 
-func removeFile(path: String) {
+public func removeFile(path: String) {
     if FileManager.default.fileExists(atPath: path) {
         try? FileManager.default.removeItem(atPath: path)
     }

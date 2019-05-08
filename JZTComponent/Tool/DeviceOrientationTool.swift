@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class DeviceOrientationTool: NSObject {
-    @objc static var allowRotation = false
+open class DeviceOrientationTool: NSObject {
+    @objc public static var allowRotation = false
 
-    @objc static func chooseNewOrientation(_ orientation: UIInterfaceOrientation) {
+    @objc public static func chooseNewOrientation(_ orientation: UIInterfaceOrientation) {
         switch orientation {
         case .landscapeRight, .landscapeLeft:
             allowRotation = true
