@@ -1,6 +1,6 @@
 //
 //  SecondViewController.swift
-//  JZTComponent
+//  JZTComponentApp
 //  
 //  Created by ash on 2019/5/8.
 //  Copyright © 2019 ash. All rights reserved.

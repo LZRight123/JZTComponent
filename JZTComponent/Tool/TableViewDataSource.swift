@@ -7,20 +7,22 @@
 //
 
 import UIKit
+import Foundation
 
-open class TableViewDataSource<Model, T: UITableViewCell>: NSObject, UITableViewDataSource {
-    typealias CellConfigurator = (Model, T) -> Void
+public class TableViewDataSource<Model, T: UITableViewCell>: NSObject, UITableViewDataSource {
+    public typealias CellConfigurator = (Model, T) -> Void
     
     private var models: [Model]
     private let cellType: T.Type
     private let cellConfigurator: CellConfigurator
     
-    init(models: [Model],
+    public init(models: [Model],
          cellType: T.Type,
          cellConfigurator: @escaping CellConfigurator) {
         self.models = models
         self.cellType = cellType
         self.cellConfigurator = cellConfigurator
+        super.init()
     }
     
     subscript(_ index: Int) -> Model {
