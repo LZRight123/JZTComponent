@@ -15,6 +15,8 @@ class SecondViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+     
         tableView.regiseter(nib: UITableViewCell.self)
         let tableViewDatasource = TableViewDataSource(models: [""], cellType: UITableViewCell.self) { (model, cell) in
             

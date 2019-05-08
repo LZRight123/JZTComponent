@@ -29,7 +29,7 @@ public class TableViewDataSource<Model, T: UITableViewCell>: NSObject, UITableVi
         get { return models[index] }
     }
     
-    var count: Int { return models.count }
+    public var count: Int { return models.count }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return count
@@ -47,7 +47,7 @@ public class TableViewDataSource<Model, T: UITableViewCell>: NSObject, UITableVi
 public class SectionedTableViewDataSource: NSObject, UITableViewDataSource {
     private let dataSources: [UITableViewDataSource]
     
-    init(dataSources: [UITableViewDataSource]) {
+    public init(dataSources: [UITableViewDataSource]) {
         self.dataSources = dataSources
     }
     
