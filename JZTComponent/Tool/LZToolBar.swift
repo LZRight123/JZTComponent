@@ -74,7 +74,7 @@ public class LZToolBar: SpringView {
 }
 
 //MARK: - 交互
-extension LZToolBar {
+public extension LZToolBar {
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         var touchBound = bounds
         touchBound.size.height = bounds.height + 34.0
