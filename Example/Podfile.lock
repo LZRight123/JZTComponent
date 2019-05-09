@@ -1,0 +1,16 @@
+PODS:
+  - JZTComponent (1.0.0)
+
+DEPENDENCIES:
+  - JZTComponent (from `../`)
+
+EXTERNAL SOURCES:
+  JZTComponent:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JZTComponent: 7ccf97d76d0932d574d8812bfd2ed6eb9e557522
+
+PODFILE CHECKSUM: 16ed73a284f0c6a0bc85ae4100878b0c9f88d733
+
+COCOAPODS: 1.6.1
