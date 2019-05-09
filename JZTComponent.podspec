@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name = "JZTComponent"
-  s.version = "1.0.2"
+  s.version = "1.0.3"
   s.license = 'MIT'
   s.summary = "Categorys，tools，TransitioningAnimate."
   s.homepage = "https://github.com/LZRight123/JZTComponent.git"
   s.author = { "梁泽" => "350442340@qq.com" }
   s.source = {
     :git => "https://github.com/LZRight123/JZTComponent.git",
-    :tag => "#{s.version}",
+    :tag => s.version,
     :submodules => true
   }
 
@@ -29,6 +29,5 @@ Pod::Spec.new do |s|
   s.subspec 'TransitioningAnimate' do |transitioningAnimate|
     transitioningAnimate.source_files = 'JZTComponent/TransitioningAnimate/*.swift'
   end
-
   
 end
