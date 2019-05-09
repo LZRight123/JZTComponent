@@ -9,7 +9,7 @@
 
 import UIKit
 @_exported import JZTComponent
-import JZTComponent
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
